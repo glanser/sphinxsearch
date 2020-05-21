@@ -13,7 +13,7 @@ Require this package in your composer.json:
 ```php
 	"require": {
         /*** Some others packages ***/
-		"sngrl/sphinxsearch": "dev-master",
+		"glanser/sphinxsearch": "dev-master",
 	},
 ```
 
@@ -31,14 +31,14 @@ After updating composer, add the ServiceProvider to the "providers" array in con
 ```php
 	'providers' => array(
         /*** Some others providers ***/
-        sngrl\SphinxSearch\SphinxSearchServiceProvider::class,
+        glanser\SphinxSearch\SphinxSearchServiceProvider::class,
     ),
 ```
 
 You can add this line to the files, where you may use SphinxSearch:
 
 ```php
-use sngrl\SphinxSearch\SphinxSearch;
+use glanser\SphinxSearch\SphinxSearch;
 ```
 
 Configuration
@@ -47,7 +47,7 @@ Configuration
 To use Sphinx Search, you need to configure your indexes and what model it should query. To do so, publish the configuration into your app.
 
 ```php
-php artisan vendor:publish --provider=sngrl\SphinxSearch\SphinxSearchServiceProvider --force
+php artisan vendor:publish --provider=glanser\SphinxSearch\SphinxSearchServiceProvider --force
 ```
 
 This will create the file `config/sphinxsearch.php`. Modify as needed the host and port, and configure the indexes, binding them to a table and id column.
@@ -115,4 +115,4 @@ $result = $sphinx->search('my query', 'index_name')
 License
 =======================
 
-Sngrl Sphinx Search is open-sourced software licensed under the MIT license
+Glanser Sphinx Search is open-sourced software licensed under the MIT license
