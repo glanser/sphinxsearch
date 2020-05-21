@@ -1,18 +1,22 @@
 {
   "name": "glanser/sphinxsearch",
-  "description": "Laravel package to query Sphinxsearch in Laravel - fork of sngrl/sphinxsearch",
+  "description": "Laravel package to query Sphinxsearch in Laravel, fork of sngrl/sphinxsearch",
   "keywords": [
     "sphinx",
     "sphinxsearch",
     "laravel",
     "laravel 7"
   ],
-  "homepage": "http://github.com/sngrl/sphinxsearch",
+  "homepage": "http://github.com/glanser/sphinxsearch",
   "license": "Apache-2.0",
   "authors": [
     {
       "name": "sngrl",
       "email": "reserved@mail.ru"
+    },
+    {
+      "name": "glanser",
+      "email": "sergey@ananskikh.ru"
     }
   ],
   "require": {
@@ -22,7 +26,7 @@
   },
   "autoload": {
     "psr-0": {
-      "glanser\\SphinxSearch": "src/"
+      "Glanser\\SphinxSearch": "src/"
     }
   }
 }

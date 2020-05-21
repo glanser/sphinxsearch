@@ -1,7 +1,8 @@
-Sphinx Search for Laravel 5 - Custom build with snippets support 
+Sphinx Search for Laravel - Custom build with snippets support 
 =======================
-Simple Laravel 5 package for make queries to Sphinx Search.
+Simple Laravel package for make queries to Sphinx Search.
 Inspired by scalia/sphinxsearch package for Laravel 4.
+Inspired by sngrl/sphinxsearch package for Laravel 5.
 
 This package was created to import to the site packagist.org and allow installation through Composer (https://getcomposer.org/).
 
@@ -31,14 +32,14 @@ After updating composer, add the ServiceProvider to the "providers" array in con
 ```php
 	'providers' => array(
         /*** Some others providers ***/
-        glanser\SphinxSearch\SphinxSearchServiceProvider::class,
+        Glanser\SphinxSearch\SphinxSearchServiceProvider::class,
     ),
 ```
 
 You can add this line to the files, where you may use SphinxSearch:
 
 ```php
-use glanser\SphinxSearch\SphinxSearch;
+use Glanser\SphinxSearch\SphinxSearch;
 ```
 
 Configuration
@@ -47,7 +48,7 @@ Configuration
 To use Sphinx Search, you need to configure your indexes and what model it should query. To do so, publish the configuration into your app.
 
 ```php
-php artisan vendor:publish --provider=glanser\SphinxSearch\SphinxSearchServiceProvider --force
+php artisan vendor:publish --provider=Glanser\SphinxSearch\SphinxSearchServiceProvider --force
 ```
 
 This will create the file `config/sphinxsearch.php`. Modify as needed the host and port, and configure the indexes, binding them to a table and id column.
